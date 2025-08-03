@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: MessageConsumerApp
+  datasource:
+    url: jdbc:mysql://localhost:3306/useradmindb      # Container 마다 고유한 Port를 가짐
+    username: root
+    password: moon
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: 20      # 최대 커넥션 풀 사이즈
+      minimum-idle: 10           # 최소 유휴 커넥 수
+      connection-timeout: 30000  # 연결타임아웃(ms)
+      idle-timeout: 600000       # 유휴 커넥션 타임아웃 (ms)
+      max-lifetime: 1800000      # 커넥션의 최대 수명 (ms)
+      validation-timeout: 5000   # 커넥션 유효성 검사 타임아웃 (ms)
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      timeout: 5000
+      password: moon
+
+server:
+  port: 8083
