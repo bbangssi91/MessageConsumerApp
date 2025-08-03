@@ -19,6 +19,6 @@ import org.springframework.web.bind.annotation.RequestHeader;
 public interface KakaoMessageClient {
 
     @PostMapping(value = "/kakaotalk-messages", produces = MediaType.APPLICATION_JSON_VALUE,consumes = MediaType.APPLICATION_JSON_VALUE)
-    ResponseEntity<Void> sendKakaoMessage(@RequestHeader("API_KEY") String apiKey, @RequestBody KakaoMessageRequestDto request);
+    ResponseEntity<?> sendKakaoMessage(@RequestHeader("API_KEY") String apiKey, @RequestBody KakaoMessageRequestDto request);
 
 }

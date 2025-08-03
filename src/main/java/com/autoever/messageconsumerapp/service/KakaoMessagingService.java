@@ -18,7 +18,7 @@ import org.springframework.stereotype.Service;
 @Slf4j
 @RequiredArgsConstructor
 @Service
-public class MessageProcessingService {
+public class KakaoMessagingService {
 
     @Value( "${external.kakao.api-key}")
     private String API_KEY;
