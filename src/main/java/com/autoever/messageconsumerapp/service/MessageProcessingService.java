@@ -19,7 +19,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class MessageProcessingService {
 
-    private String API_KEY = "asdfjalksdfjalksdfjalksdwgaegew";
+    private final String API_KEY = "asdfjalksdfjalksdfjalksdwgaegew";
 
     private final RedisTemplate<String, String> redisTemplate;
     private final KakaoMessageClient kakaoMessageClient;
