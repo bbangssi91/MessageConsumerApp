@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestHeader;
 @FeignClient(
         name = "kakaoMessageClient",
         fallbackFactory = KakaoMessageClientFallbackFactory.class,
+        url = "${external.kakao.url}",
         configuration = FeignClientConfig.class
 )
 public interface KakaoMessageClient {

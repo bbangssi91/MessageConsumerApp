@@ -29,17 +29,10 @@ spring:
 server:
   port: 8083
 
-feign:
-  client:
-    config:
-      kakaoMessageClient:
-        url: http://kakao-message-mocking-app:8081
-      smsMessageClient:
-        url: http://sms-message-mocking-app:8082
-
-
 external:
   kakao:
+    url: 'http://kakao-message-mocking-app:8081'
     api-key: testtestasdfjalksdfjalksdfjalksdwgaegew
   sms:
+    url: 'http://sms-message-mocking-app:8082'
     api-key: smstestasdfjklasgjklawegjasdfasdfasdfas

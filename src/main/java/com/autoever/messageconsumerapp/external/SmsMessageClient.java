@@ -14,6 +14,7 @@ import java.util.Map;
 @FeignClient(
         name = "smsMessageClient",
         fallbackFactory = SmsMessageClientFallbackFactory.class,
+        url = "${external.sms.url}",
         configuration = FeignClientConfig.class
 )
 public interface SmsMessageClient {
