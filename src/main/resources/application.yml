@@ -2,7 +2,7 @@ spring:
   application:
     name: MessageConsumerApp
   datasource:
-    url: jdbc:mysql://localhost:3306/useradmindb      # Container 마다 고유한 Port를 가짐
+    url: jdbc:mysql://user-admin-database:3306/useradmindb      # Container 마다 고유한 Port를 가짐
     username: root
     password: moon
     driver-class-name: com.mysql.cj.jdbc.Driver
