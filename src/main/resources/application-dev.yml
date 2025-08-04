@@ -33,6 +33,14 @@ spring:
 server:
   port: 8083
 
+feign:
+  client:
+    config:
+      kakaoMessageClient:
+        url: http://localhost:8081
+      smsMessageClient:
+        url: http://localhost:8082
+
 external:
   kakao:
     api-key: testtestasdfjalksdfjalksdfjalksdwgaegew

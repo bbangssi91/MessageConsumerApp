@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestHeader;
 
 @FeignClient(
         name = "kakaoMessageClient",
-        url = "http://localhost:8081",
         fallbackFactory = KakaoMessageClientFallbackFactory.class,
         configuration = FeignClientConfig.class
 )

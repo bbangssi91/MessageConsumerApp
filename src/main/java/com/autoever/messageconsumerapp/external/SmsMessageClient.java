@@ -13,7 +13,6 @@ import java.util.Map;
 
 @FeignClient(
         name = "smsMessageClient",
-        url = "http://localhost:8082",
         fallbackFactory = SmsMessageClientFallbackFactory.class,
         configuration = FeignClientConfig.class
 )
